@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="text-3xl text-blue-500">Driver Management system</div>
+      <div className="text-3xl text-blue-500">JavaScript is</div>
     </>
   );
 }
