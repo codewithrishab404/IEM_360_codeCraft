@@ -8,7 +8,7 @@
 
 Managing bus drivers manually leads to inefficiencies, errors, and high operational costs. Scheduling, attendance tracking, performance monitoring, and route assignments are often disorganized, affecting safety and compliance. A _Bus Driver Management System_ will streamline these processes, improve communication, reduce costs, and enhance overall efficiency.
 
-IEM_360_codeCraft is a web application to solve the problem built using **Vite, React, and TypeScript**, with **Tailwind CSS and ShadCN** for styling. The backend is powered by **Firebase**, and environment variables are managed using a `.env` file.
+DriverNet is a web application to solve the problem built using **Vite, React, and TypeScript**, with **Tailwind CSS and ShadCN** for styling. The backend is powered by **Firebase**, and environment variables are managed using a `.env` file.
 
 ## Prerequisites
 
