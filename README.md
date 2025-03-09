@@ -1,54 +1,82 @@
-# React + TypeScript + Vite
+# IEM_360_codeCraft
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Website Link:** https://iem-360-code-craft.vercel.app/
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Managing bus drivers manually leads to inefficiencies, errors, and high operational costs. Scheduling, attendance tracking, performance monitoring, and route assignments are often disorganized, affecting safety and compliance. A _Bus Driver Management System_ will streamline these processes, improve communication, reduce costs, and enhance overall efficiency.
 
-## Expanding the ESLint configuration
+IEM_360_codeCraft is a web application to solve the problem built using **Vite, React, and TypeScript**, with **Tailwind CSS and ShadCN** for styling. The backend is powered by **Firebase**, and environment variables are managed using a `.env` file.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- [Git](https://git-scm.com/)
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/codewithrishab404/IEM_360_codeCraft
+cd IEM_360_codeCraft
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm install
 ```
+
+### 3. Setup Environment Variables
+
+A sample `.env.sample` file is provided. Create a `.env` file and update it with your **Firebase credentials**:
+
+```sh
+cp .env.sample .env
+```
+
+Edit the `.env` file and fill in the required Firebase configuration details from your Firebase project settings.
+
+### 4. Initialize Tailwind CSS & ShadCN
+
+[Tailwind setup docs](https://tailwindcss.com/docs/installation/using-vite)
+[ShadCN setup docs](https://ui.shadcn.com/docs/installation/vite)
+
+Ensure Tailwind CSS and ShadCN are set up correctly. If needed, run:
+
+```sh
+npx shadcn-ui@latest init
+```
+
+### 5. Start the Development Server
+
+```sh
+npm run dev
+```
+
+This will start the Vite development server temporarily. The app should now be accessible at `http://localhost:5173/`.
+
+## Firebase Setup Guide
+
+1. Go to the [Firebase Console](https://console.firebase.google.com/).
+2. Create a new project.
+3. Add a Web App and copy the Firebase config.
+4. Update your `.env` file with the required Firebase credentials.
+5. Enable Firestore and Authentication.
+
+## Build for Production
+
+To create a production-ready build, run:
+
+```sh
+npm run build
+```
+
+This generates an optimized build in the `dist/` directory.
+
+## Contact
+
+For queries, reach out to **rishabmallick20004@gmail.com** or open an issue on GitHub.
